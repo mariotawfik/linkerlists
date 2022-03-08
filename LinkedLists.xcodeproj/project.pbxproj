@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E6B7115927C7C8C300D5313E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B7115827C7C8C300D5313E /* main.cpp */; };
+		E6B7116827C7CDBC00D5313E /* ListOfNumbers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B7116627C7CDBC00D5313E /* ListOfNumbers.cpp */; };
+		E6B7116A27C7CE1C00D5313E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6B7116927C7CE1C00D5313E /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		E6B7115527C7C8C300D5313E /* LinkedLists */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinkedLists; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6B7115827C7C8C300D5313E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E6B7116627C7CDBC00D5313E /* ListOfNumbers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ListOfNumbers.cpp; sourceTree = "<group>"; };
+		E6B7116727C7CDBC00D5313E /* ListOfNumbers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ListOfNumbers.hpp; sourceTree = "<group>"; };
+		E6B7116927C7CE1C00D5313E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +44,9 @@
 		E6B7114C27C7C8C300D5313E = {
 			isa = PBXGroup;
 			children = (
-				E6B7115727C7C8C300D5313E /* LinkedLists */,
+				E6B7116927C7CE1C00D5313E /* main.cpp */,
+				E6B7116627C7CDBC00D5313E /* ListOfNumbers.cpp */,
+				E6B7116727C7CDBC00D5313E /* ListOfNumbers.hpp */,
 				E6B7115627C7C8C300D5313E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +57,6 @@
 				E6B7115527C7C8C300D5313E /* LinkedLists */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E6B7115727C7C8C300D5313E /* LinkedLists */ = {
-			isa = PBXGroup;
-			children = (
-				E6B7115827C7C8C300D5313E /* main.cpp */,
-			);
-			path = LinkedLists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +116,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B7115927C7C8C300D5313E /* main.cpp in Sources */,
+				E6B7116A27C7CE1C00D5313E /* main.cpp in Sources */,
+				E6B7116827C7CDBC00D5313E /* ListOfNumbers.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +238,7 @@
 		E6B7115D27C7C8C300D5313E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -248,6 +247,7 @@
 		E6B7115E27C7C8C300D5313E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AEA43CAA-FCE1-41B4-AAB1-CFE6F4438193"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD89FFDB-855D-449C-B406-3124C5AD07A4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ListOfNumbers.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "ListOfNumbers::~ListOfNumbers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CD89FFDB-855D-449C-B406-3124C5AD07A4 - 1bb7fd7cfe1dabfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ListOfNumbers::~ListOfNumbers()"
+                  moduleName = "LinkedLists"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marytamry/Desktop/LinkedLists/ListOfNumbers.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "CD89FFDB-855D-449C-B406-3124C5AD07A4 - 1bb7fd7cfe1dabfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ListOfNumbers::~ListOfNumbers()"
+                  moduleName = "LinkedLists"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marytamry/Desktop/LinkedLists/ListOfNumbers.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "743E3327-81EE-4721-8A62-CEC83DD8C66D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ListOfNumbers.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "ListOfNumbers::PrintPTR(p)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
