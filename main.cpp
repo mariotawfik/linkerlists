@@ -25,7 +25,6 @@ int main(){
     a->NewLON();
     a->NewLON();
     a->NewLON();
-    a->NewLON();
     a->setSentinel();
     a->PrintList();
     cout<<endl<<endl;
