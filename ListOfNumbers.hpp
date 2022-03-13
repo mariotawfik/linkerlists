@@ -62,6 +62,8 @@ public:
     void setSentinel();
     
     bool getSentinel(ListOfNumbers* p);
+    
+    ListOfNumbers* findMinimum();
 };
 
 #endif /* ListOfNumbers_hpp */

@@ -23,6 +23,9 @@ int main(){
     cout << endl << endl << endl << "List 2 : " << endl;
     c->PrintList();
     a->NewLON();
+    a->NewLON();
+    a->NewLON();
+    a->NewLON();
     a->setSentinel();
     a->PrintList();
     cout<<endl<<endl;

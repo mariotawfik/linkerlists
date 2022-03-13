@@ -206,35 +206,45 @@ bool ListOfNumbers::getSentinel(ListOfNumbers* p){
     }
 
     ListOfNumbers* ListOfNumbers::sortList(){
-        ListOfNumbers* previousTemp = this;
-        ListOfNumbers* current = previousTemp->next;
-        ListOfNumbers* temp = current->next;
-        ListOfNumbers* temp2 = temp->next;
-        int i= 0;
+        ListOfNumbers* current = this->next;
+        ListOfNumbers* currentPrevious = this;
+        ListOfNumbers* currentNext = NULL;
+        ListOfNumbers* minimumNext = NULL;
+        ListOfNumbers* minimum = NULL;
+        ListOfNumbers* minimumPrevious = NULL;
+        int i = 0;
         while(current != NULL){
-            current = current->next;
+            currentNext = current->next;
             i++;
-        }
-        current = previousTemp->next;
-        for(int k= 0; k < i;k++){
-            for(int p = 0; p < i-1; p++){
-                if(current->next != NULL){
-                    if(current->number >= temp->number){
-                        
-                        temp->next = current;
-                        current->next = temp2;
-                        previousTemp->next = temp;
-                    }
-                    previousTemp = previousTemp->next;
-                    current = previousTemp->next;
-                    temp = current->next;
-                }
+            minimum = current->findMinimum();
+            minimumPrevious = findPrevious(minimum);
+            minimumNext = minimum->next;
+            currentPrevious = findPrevious(current);
+            if(minimumPrevious == current){
+                currentPrevious->next = minimum;
+                minimum->next = current;
+                current->next = minimumNext;
+                current = minimum->next;
+            }else{
+                currentPrevious->next = minimum;
+                minimumPrevious->next = current;
+                current->next = minimumNext;
+                minimum->next = currentNext;
+                current = minimum->next;
             }
-            previousTemp = this;
-            current = previousTemp->next;
-            temp = current->next;
         }
+        return this;
+    }
 
-    return this;
+ListOfNumbers* ListOfNumbers::findMinimum(){
+    ListOfNumbers* current = this->next;
+    ListOfNumbers* minimum = this;
+    while(current != NULL){
+        if(minimum->number >= current->number){
+            minimum = current;
+        }
+        current = current->next;
+    }
+    return minimum;
 }
 
