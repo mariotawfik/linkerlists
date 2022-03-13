@@ -247,3 +247,4 @@ ListOfNumbers* ListOfNumbers::findMinimum(){
     }
     return minimum;
 }
+

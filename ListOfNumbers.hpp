@@ -65,4 +65,5 @@ public:
     
     ListOfNumbers* findMinimum();
 };
+
 #endif /* ListOfNumbers_hpp */
