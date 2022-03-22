@@ -4,6 +4,8 @@
 //
 #include "ListOfNumbers.hpp"
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 using namespace std;
 
 ListOfNumbers::ListOfNumbers(){
@@ -248,4 +250,69 @@ ListOfNumbers* ListOfNumbers::findMinimum(){
     return minimum;
 }
 
- 
+int* ListOfNumbers::randArray(int num){
+    int* arr = new int(num);
+    srand(time(NULL));
+    for(int i = 0; i < num; i++){
+        arr[i] = rand()%10000;
+    }
+    return arr;
+}
+
+ListOfNumbers* ListOfNumbers::randList(int* arr, int num){
+    ListOfNumbers* a = new ListOfNumbers(INT_MAX-1);
+    for(int i = 0; i < num; i++){
+        a->intAddR(arr[i]);
+    }
+    a->setSentinel();
+    return a;
+}
+
+void ListOfNumbers::arrayBubbleSort(int* arr, int num){
+    int* temp = new int;
+    for(int i= 0; i < num; i++){
+        for(int j = 0; j < num; j++){
+            if(arr[j] > arr[i]){
+                *temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = *temp;
+            }
+        }
+    }
+}
+
+void ListOfNumbers::sortingTime(int num){
+    int* array = randArray(num);
+    ListOfNumbers* list = randList(array, num);
+    clock_t start, end;
+    start = clock();
+    arrayBubbleSort(array, num);
+    end = clock();
+    double arrayTime = (double)(end-start)/CLOCKS_PER_SEC;
+    start = clock();
+    list->sortList();
+    end = clock();
+    double listTime = (double)(end-start)/CLOCKS_PER_SEC;
+    cout << "Array sorting time: " << arrayTime << endl;
+    cout<< "List sorting time: " << listTime << endl;
+    if(arrayTime > listTime){
+        cout << "Linked List sorting takes less time by a margin of " << arrayTime-listTime << " seconds" << endl;
+    }else{
+        if( arrayTime != listTime){
+            cout << "Array sorting takes less time by a margin of " << listTime-arrayTime << " seconds" << endl;
+        }else{
+            cout << "Array and Linked list sorting time are the same at a time of " << listTime << " seconds" << endl;
+        }
+    }
+}
+
+void ListOfNumbers::elementsOfArrayAndList(int* arr, ListOfNumbers* list, int num){
+    cout << endl << endl;
+    for(int i = 0; i < num; i++){
+        cout << arr[i] << endl;
+    }
+    cout << endl << endl;
+    list->PrintList();
+    cout << endl << endl;
+}
+

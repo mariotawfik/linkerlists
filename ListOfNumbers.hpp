@@ -6,6 +6,7 @@
 #ifndef ListOfNumbers_hpp
 #define ListOfNumbers_hpp
 
+
 class ListOfNumbers {
 private:
     int number;
@@ -64,6 +65,16 @@ public:
     bool getSentinel(ListOfNumbers* p);
     
     ListOfNumbers* findMinimum();
+    
+    int* randArray(int num);
+    
+    ListOfNumbers* randList(int* arr, int num);
+    
+    void arrayBubbleSort(int* arr, int num);
+    
+    void sortingTime(int num);
+    
+    void elementsOfArrayAndList(int* arr, ListOfNumbers* list, int num);
 };
 
 #endif /* ListOfNumbers_hpp */
